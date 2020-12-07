@@ -91,8 +91,26 @@ namespace Data_Structure_Problem
             }
             Node temp = head;
             head = head.next;
-            return temp;
-            Console.WriteLine("The Deleted firstelement in the list is  :" + temp);
+            return temp;        
+        }
+        internal Node popLast()
+        {
+            if(head == null)
+            {
+                Console.WriteLine("There is No element to delete in the list");
+                return null;
+            }
+            if(head.next == null)
+            {
+                return null;
+            }
+            Node NewNode = head;
+            while(NewNode.next.next != null)
+            {
+                NewNode = NewNode.next;
+            }
+            NewNode.next = null;
+            return head;
         }
         internal int CheckFirstElement()
         {
