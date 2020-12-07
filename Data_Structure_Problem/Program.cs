@@ -16,6 +16,9 @@ namespace Data_Structure_Problem
             Console.WriteLine("\n first element in the list is : " + linkedList.CheckFirstElement());
             Console.WriteLine(" Middle elemnet in the list is : " + linkedList.CheckMiddleElement());
             Console.WriteLine(" last element in the list is : " + linkedList.CheckLastElement());
+            linkedList.pop();
+            Console.WriteLine("deleted element is :" + linkedList.CheckFirstElement());
+            linkedList.Display();
             Console.ReadLine();
         }
     }

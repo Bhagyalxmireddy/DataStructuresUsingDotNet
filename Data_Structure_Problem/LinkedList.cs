@@ -83,6 +83,17 @@ namespace Data_Structure_Problem
             }
             Console.WriteLine("The inserted middle element is : " + node.data);
         }
+        internal Node pop()
+        {
+            if(head == null)
+            {
+                Console.WriteLine("There is no element to delete in the list");
+            }
+            Node temp = head;
+            head = head.next;
+            return temp;
+            Console.WriteLine("The Deleted firstelement in the list is  :" + temp);
+        }
         internal int CheckFirstElement()
         {
             return this.head.data;
