@@ -11,13 +11,13 @@ namespace Data_Structure_Problem
         internal void Add(int data)
         {
             Node node = new Node(data);
-            if (this.tail == null)
-            {
-                tail = node;
-            }
             if (this.head == null)
             {
                 this.head = node;
+            }
+            if (this.tail == null)
+            {
+                tail = node;
             }
             else
             {
@@ -40,6 +40,37 @@ namespace Data_Structure_Problem
                     temp = temp.next;
                 }
             }
+        }
+        internal void Append(int data)
+        {
+            Node node = new Node(data);
+            if (this.head == null)
+            {
+                this.head = node;
+            }
+            if (this.tail == null)
+            {
+                this.tail = node;
+            }
+            else
+            {
+                this.tail.next = node;
+                this.tail = node;
+            }
+        }
+        internal int CheckFirstElement()
+        {
+            return this.head.data;
+        }
+
+        internal int CheckLastElement()
+        {
+            return this.tail.data;
+        }
+
+        internal int CheckMiddleElement()
+        {
+            return this.head.next.data;
         }
     }
 }
