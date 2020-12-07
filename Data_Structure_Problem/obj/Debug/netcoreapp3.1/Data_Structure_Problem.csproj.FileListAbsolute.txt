@@ -1,0 +1,13 @@
+C:\Users\USER\source\repos\Data_Structure_Problem\Data_Structure_Problem\bin\Debug\netcoreapp3.1\Data_Structure_Problem.exe
+C:\Users\USER\source\repos\Data_Structure_Problem\Data_Structure_Problem\bin\Debug\netcoreapp3.1\Data_Structure_Problem.deps.json
+C:\Users\USER\source\repos\Data_Structure_Problem\Data_Structure_Problem\bin\Debug\netcoreapp3.1\Data_Structure_Problem.runtimeconfig.json
+C:\Users\USER\source\repos\Data_Structure_Problem\Data_Structure_Problem\bin\Debug\netcoreapp3.1\Data_Structure_Problem.runtimeconfig.dev.json
+C:\Users\USER\source\repos\Data_Structure_Problem\Data_Structure_Problem\bin\Debug\netcoreapp3.1\Data_Structure_Problem.dll
+C:\Users\USER\source\repos\Data_Structure_Problem\Data_Structure_Problem\bin\Debug\netcoreapp3.1\Data_Structure_Problem.pdb
+C:\Users\USER\source\repos\Data_Structure_Problem\Data_Structure_Problem\obj\Debug\netcoreapp3.1\Data_Structure_Problem.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\Data_Structure_Problem\Data_Structure_Problem\obj\Debug\netcoreapp3.1\Data_Structure_Problem.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\Data_Structure_Problem\Data_Structure_Problem\obj\Debug\netcoreapp3.1\Data_Structure_Problem.AssemblyInfo.cs
+C:\Users\USER\source\repos\Data_Structure_Problem\Data_Structure_Problem\obj\Debug\netcoreapp3.1\Data_Structure_Problem.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\Data_Structure_Problem\Data_Structure_Problem\obj\Debug\netcoreapp3.1\Data_Structure_Problem.dll
+C:\Users\USER\source\repos\Data_Structure_Problem\Data_Structure_Problem\obj\Debug\netcoreapp3.1\Data_Structure_Problem.pdb
+C:\Users\USER\source\repos\Data_Structure_Problem\Data_Structure_Problem\obj\Debug\netcoreapp3.1\Data_Structure_Problem.genruntimeconfig.cache
