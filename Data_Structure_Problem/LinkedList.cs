@@ -25,12 +25,12 @@ namespace Data_Structure_Problem
                 this.head = node;
                 this.head.next = tempNode;
             }
-            Console.WriteLine("{0} instered into linkedList ", node.data);
+            Console.WriteLine("{0} instered into List ", node.data);
         }
         public void Display()
         {
             if (head == null)
-                Console.WriteLine("List is Empty");
+                Console.WriteLine("There are No elements in the list");
             else
             {
                 Node temp = head;
