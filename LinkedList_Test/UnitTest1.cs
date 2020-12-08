@@ -116,7 +116,22 @@ namespace LinkedList_Test
 
             int searchkey = linkedList.Search(secondElement);
             Assert.AreEqual(searchkey, secondElement);
+        }
+        [TestMethod]
+        public void givenElements_WhenInsertedAnddelete_AndReturnTheSize()
+        {
+            int firstElement = 70;
+            int secondElement = 30;
+            int thirdElement = 40;
+            int fourtElement = 56;
 
+            linkedList.Append(firstElement);
+            linkedList.Append(secondElement);
+            linkedList.Append(fourtElement);
+            linkedList.Insert(4, thirdElement);
+            linkedList.RemoveElemet(thirdElement);
+            int size = linkedList.sizeOfList();
+            Assert.AreEqual(3, size);
         }
     }
 }

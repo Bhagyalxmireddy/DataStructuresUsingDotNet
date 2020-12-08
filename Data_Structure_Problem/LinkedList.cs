@@ -95,22 +95,6 @@ namespace Data_Structure_Problem
         }
         public Node popLast()
         {
-            /* if(head == null)
-             {
-                 Console.WriteLine("There is No element to delete in the list");
-                 return null;
-             }
-             if(head.next == null)
-             {
-                 return null;
-             }
-             Node NewNode = head;
-             while(NewNode.next.next != null)
-             {
-                 NewNode = NewNode.next;
-             }
-             NewNode.next = null;
-             return head;*/
             if (head == null)
             {
                 Console.WriteLine("There is No element to delete in the list");
@@ -129,6 +113,23 @@ namespace Data_Structure_Problem
                 return finalNode;
             }
         }
+        public void RemoveElemet(int key)
+        {
+            Node temp = head, previous = null;
+            if (temp != null && temp.data == key)
+            {
+                head = temp.next;
+                return;
+            }
+            while (temp != null && temp.data != key)
+            {
+                previous = temp;
+                temp = temp.next;
+            }
+            if (temp == null)
+                return;
+            previous.next = temp.next;
+        }
         public int Search(int key)
         {
             Node temp = head;
@@ -141,6 +142,17 @@ namespace Data_Structure_Problem
                 temp = temp.next;
             }
             return 0;
+        }
+        public int sizeOfList()
+        {
+            Node tempNode = this.head;
+            int size = 0;
+            while (tempNode != null)
+            {
+                size++;
+                tempNode = tempNode.next;
+            }
+            return size;
         }
         public int CheckFirstElement()
         {
