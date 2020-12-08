@@ -103,5 +103,20 @@ namespace LinkedList_Test
             int searchKey = linkedList.Search(secondElement);
             Assert.AreEqual(searchKey, secondElement);          
         }
+        [TestMethod]
+        public void givenElement_NeedToInsertInthelist_searchWithKey()
+        {
+            int firstElement = 70;
+            int secondElement = 30;
+            int thirdElement = 56;
+
+            linkedList.Append(firstElement);
+            linkedList.Append(thirdElement);
+            linkedList.Insert(2, 30);
+
+            int searchkey = linkedList.Search(secondElement);
+            Assert.AreEqual(searchkey, secondElement);
+
+        }
     }
 }
