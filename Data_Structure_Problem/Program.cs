@@ -23,6 +23,8 @@ namespace Data_Structure_Problem
             Console.WriteLine("\n deleted element is :" + linkedList.CheckLastElement());
             linkedList.popLast();
             linkedList.Display();
+            linkedList.Search(30);
+
             Console.ReadLine();
         }
     }
