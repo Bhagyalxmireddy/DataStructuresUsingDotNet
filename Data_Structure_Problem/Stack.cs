@@ -6,7 +6,6 @@ namespace Data_Structure_Problem
 {
     public class Stack
     {
-        LinkedList linkedList = new LinkedList();
         public Node top;
         public Node tail;
         public void PushElements(int data)
@@ -45,12 +44,6 @@ namespace Data_Structure_Problem
         }
         public int peek()
         {
-           /* if (this.top == null)
-            {
-                Console.WriteLine("Stack is empty");
-                return 0;
-            }
-            Console.WriteLine("{0} is the Top of stack", this.top.data);*/
             return this.top.data;
         }
         public Node pop()
@@ -64,12 +57,33 @@ namespace Data_Structure_Problem
             top = top.next;
             return temp;
         }
-        public void Is_Empty()
+        public int size()
         {
-            while(this.top != null)
+            Node tempNode = this.top;
+            int size = 0;
+            while (tempNode != null)
+            {
+                size++;
+                tempNode = tempNode.next;
+            }
+            return size;
+        }
+        public void Empty_TheStack()
+        {
+            while (size() != 0)
             {
                 pop();
-                peek();
+            }
+        }
+        public bool Is_Empty()
+        {
+            if (size() == 0)
+            {
+              return true;
+            }
+            else
+            {
+               return false;
             }
         }
     }
