@@ -7,6 +7,8 @@ namespace Stack_Queue_Testing
     public class UnitTest1
     {
         Stack stack = new Stack();
+        Queue queue = new Queue();
+
         [TestMethod]
         public void gievnElemenst_PushToTheStack()
         {
@@ -61,6 +63,34 @@ namespace Stack_Queue_Testing
             stack.Empty_TheStack();
             bool result = stack.Is_Empty();
             Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void givenElements_AddingElementsToTheQueue()
+        {
+            int firstElement = 70;
+            int secondElement = 30;
+            int thirdElement = 56;
+
+            queue.Enqueue(firstElement);
+            queue.Enqueue(secondElement);
+            queue.Enqueue(thirdElement);
+            queue.Dequeue();
+            bool result = queue.IsEmpty();
+            Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void givenElement_SizeOfQueue()
+        {
+            int firstElement = 70;
+            int secondElement = 30;
+            int thirdElement = 56;
+
+            queue.Enqueue(firstElement);
+            queue.Enqueue(secondElement);
+            queue.Enqueue(thirdElement);
+            queue.Dequeue();
+            int size = queue.Size();
+            Assert.AreEqual(3, size);
         }
     }
 }

@@ -24,6 +24,14 @@ namespace Data_Structure_Problem
         {
             return stack.Is_Empty();
         }
+        public void Dequeue()
+        {
+            stack.Empty_TheStack();
+        }
+        public int Size()
+        {
+            return linked.sizeOfList();
+        }
 
     }
 }
