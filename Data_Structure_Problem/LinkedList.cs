@@ -8,7 +8,7 @@ namespace Data_Structure_Problem
     {
         internal Node head;
         internal Node tail;
-        internal void Add(int data)
+        public void Add(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -27,7 +27,7 @@ namespace Data_Structure_Problem
             }
             Console.WriteLine("{0} instered into linkedList ", node.data);
         }
-        internal void Display()
+        public void Display()
         {
             if (head == null)
                 Console.WriteLine("List is Empty");
@@ -41,7 +41,7 @@ namespace Data_Structure_Problem
                 }
             }
         }
-        internal void Append(int data)
+        public void Append(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -58,7 +58,7 @@ namespace Data_Structure_Problem
                 this.tail = node;
             }
         }
-        internal void Insert(int position,int data)
+        public void Insert(int position,int data)
         {
             Node node = new Node(data);
             if (position < 1)
@@ -83,7 +83,7 @@ namespace Data_Structure_Problem
             }
             Console.WriteLine("The inserted middle element is : " + node.data);
         }
-        internal Node pop()
+        public Node pop()
         {
             if(head == null)
             {
@@ -93,36 +93,66 @@ namespace Data_Structure_Problem
             head = head.next;
             return temp;        
         }
-        internal Node popLast()
+        public Node popLast()
         {
-            if(head == null)
+            /* if(head == null)
+             {
+                 Console.WriteLine("There is No element to delete in the list");
+                 return null;
+             }
+             if(head.next == null)
+             {
+                 return null;
+             }
+             Node NewNode = head;
+             while(NewNode.next.next != null)
+             {
+                 NewNode = NewNode.next;
+             }
+             NewNode.next = null;
+             return head;*/
+            if (head == null)
             {
                 Console.WriteLine("There is No element to delete in the list");
                 return null;
             }
-            if(head.next == null)
+            else
             {
-                return null;
+                Node temp = head;
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                Node finalNode = temp.next;
+                temp.next = null;
+                this.tail = temp;
+                return finalNode;
             }
-            Node NewNode = head;
-            while(NewNode.next.next != null)
-            {
-                NewNode = NewNode.next;
-            }
-            NewNode.next = null;
-            return head;
         }
-        internal int CheckFirstElement()
+        public int Search(int key)
+        {
+            Node temp = head;
+            while (temp != null)
+            {
+                if (temp.data == key)
+                {
+                    return temp.data;
+                }
+                temp = temp.next;
+            }
+            return 0;
+        }
+        public int CheckFirstElement()
         {
             return this.head.data;
         }
 
-        internal int CheckLastElement()
+        public int CheckLastElement()
         {
             return this.tail.data;
         }
 
-        internal int CheckMiddleElement()
+        public int CheckMiddleElement()
         {
             return this.head.next.data;
         }
